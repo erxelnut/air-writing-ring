@@ -1,4 +1,6 @@
 # air-writing-ring
+## Note:
+- If you already have Arduino IDE and didn't use nixos, you can asks ChatGPT to helps you with that incase you don't want to overcomplicate the project like me. 
 ## How to set up the Development Environment.
 - clone this git, install nix.
 - run `nix develop`
