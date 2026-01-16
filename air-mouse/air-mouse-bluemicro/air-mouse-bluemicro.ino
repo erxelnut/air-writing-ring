@@ -5,6 +5,10 @@
 //Create an instance of class LSM6DS3
 LSM6DS3 myIMU(I2C_MODE, 0x6A);    //I2C device address 0x6A
 
+// float accX = 0;
+// float accY = 0;
+
+
 //Bluetooth : WIP
 // Define pins : WIP
 // LED for debugging (Blue LED on Xiao nRF52)
@@ -55,6 +59,7 @@ void loop() {
     // move mouse: WIP
     bluemicro_hid.mouseMove(dx,dy);
   }
+  bluemicro_hid.processQueues(CONNECTION_MODE_AUTO);
 
   //leftclick : WIP
   delay (10);
