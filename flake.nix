@@ -20,6 +20,6 @@
       shellHook = ''
         echo "Arduino CLI Env Ready"
       '';
-    }
+    };
   };
 }
