@@ -9,12 +9,13 @@
     pkgs = nixpkgs.legacyPackages."x86_64-linux";
   in
   {
-    devShells.default = pkgs.mkShell {
+    devShells.x86_64-linux.default = pkgs.mkShell {
       buildInputs = with pkgs; [
         arduino-cli
-	python3 #data processing
-	python3Packages.pyserial
 	minicom # serial monitoring
+	(python3.withPackages (p: with p; [
+	  pyserial # data processing
+	]))
       ];
       shellHook = ''
         echo "Arduino CLI Env Ready"
