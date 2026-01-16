@@ -9,4 +9,15 @@ install board core: `arduino-cli core install ...:...`
 search library: `arduino-cli lib search "..."`
 install library: `arduino-cli lib install "..."`
 - arduino-cli lib install "Seeed Arduino LSM6DS3"
+- Mouse.h
+
+arduino-cli compile --fqbn Seeeduino:nrf52:xiaonRF52840Sense .
+arduino-cli lib install "bluemicro_hid"
+arduino-cli lib install "Adafruit TinyUSB Library"
+
+arduino-cli compile --fqbn Seeeduino:nrf52:xiaonRF52840Sense .
+
+arduino-cli upload -p /dev/ttyACM0 --fqbn Seeeduino:nrf52:xiaonRF52840Sense .
+
+
 
