@@ -1,6 +1,6 @@
 #include <LSM6DS3.h>
 #include <Wire.h>
-#include <bluefruit.h>
+
 
 //some code snippet: techiesms
 //Create an instance of class LSM6DS3
